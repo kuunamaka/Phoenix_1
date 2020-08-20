@@ -15,6 +15,7 @@ defmodule TodoTutorialWeb.TaskController do
   end
 
   def create(conn, %{"task" => task_params}) do
+    # Todo.exファイルのcreate_task関数に移動している
     case Todo.create_task(task_params) do
       {:ok, _} ->
         conn
